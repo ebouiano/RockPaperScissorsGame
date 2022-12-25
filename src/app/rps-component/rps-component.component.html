@@ -1,0 +1,14 @@
+
+<div>
+    <p> Welcome to the Rock Paper Scissors Game</p>
+    <h1> Choose your Item </h1>
+    <button (click)="play('rock')">Rock</button>
+    <button (click)="play('paper')">Paper</button>
+    <button (click)="play('scissors')">Scissors</button>
+  </div>
+  <div *ngIf="result">
+    You played <b>{{ result.player }} </b>, the computer played <b>{{ result.computer }}</b>.
+    <div *ngIf="result.winner === 'player'">You won!</div>
+    <div *ngIf="result.winner === 'computer'">The computer won.</div>
+    <div *ngIf="result.winner === 'draw'">It's a draw.</div>
+  </div>
