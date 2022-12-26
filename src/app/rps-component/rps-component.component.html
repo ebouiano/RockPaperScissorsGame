@@ -1,14 +1,27 @@
+<h1 align="center"> Welcome to the Rock Paper Scissors Game!</h1>
+<h2 align="center"> Choose your Symbol!</h2>
+      <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile> <button mat-fab matTooltip="Rock" color="accent" (click)="play('rock')">
+          <img src="https://img.icons8.com/ios/100/null/hand-rock.png" />
+        </button></mat-grid-tile>
+        <mat-grid-tile><button mat-fab matTooltip="Paper" color="accent" (click)="play('scissors')">
+          <img src="https://img.icons8.com/ios/100/null/hand.png"/>
+        </button></mat-grid-tile>
+        <mat-grid-tile><button mat-fab matTooltip="Scissors" color="accent" (click)="play('scissors')">
+          <img src="https://img.icons8.com/ios/100/null/hand-scissors--v1.png" />
+        </button></mat-grid-tile>
+      </mat-grid-list>
 
-<div>
-    <p> Welcome to the Rock Paper Scissors Game</p>
-    <h1> Choose your Item </h1>
-    <button (click)="play('rock')">Rock</button>
-    <button (click)="play('paper')">Paper</button>
-    <button (click)="play('scissors')">Scissors</button>
-  </div>
-  <div *ngIf="result">
-    You played <b>{{ result.player }} </b>, the computer played <b>{{ result.computer }}</b>.
-    <div *ngIf="result.winner === 'player'">You won!</div>
-    <div *ngIf="result.winner === 'computer'">The computer won.</div>
-    <div *ngIf="result.winner === 'draw'">It's a draw.</div>
-  </div>
+      <br>
+      <mat-grid-list cols="1" rowHeight="5:1">
+        <mat-grid-tile>
+      <mat-card>
+        <div *ngIf="result">
+          You played <b>{{ result.player }} </b>, the computer played <b>{{ result.computer }}</b>.
+          <div *ngIf="result.winner === 'player'">You won!</div>
+          <div *ngIf="result.winner === 'computer'">The computer won.</div>
+          <div *ngIf="result.winner === 'draw'">It's a draw.</div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+      </mat-grid-list>
