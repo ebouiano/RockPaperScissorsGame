@@ -18,7 +18,7 @@ import { Observable } from 'rxjs';
     </div>
   `,
   templateUrl: './rps-component.component.html',
-  styleUrls: ['./rps-component.component.css']
+  styleUrls: ['./rps-component.component.scss']
 })
 export class RpsComponentComponent implements OnInit {
 
