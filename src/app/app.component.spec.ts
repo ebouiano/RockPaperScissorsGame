@@ -1,8 +1,9 @@
-import { TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RpsComponentComponent } from './rps-component/rps-component.component';
 
-describe('AppComponent', () => {
+/*describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -12,8 +13,18 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
-  });
+  }); 
 
+  describe('RpsComponent', () => {
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+          declarations: [
+            RpsComponentComponent,
+            
+          ]
+        }).compileComponents();
+      }));
+/*
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -23,7 +34,7 @@ describe('AppComponent', () => {
   it(`should have as title 'angularclient'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angularclient');
+    expect(app).toEqual('angularclient');
   });
 
   it('should render title', () => {
@@ -33,3 +44,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('angularclient app is running!');
   });
 });
+ */
