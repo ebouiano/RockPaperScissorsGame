@@ -1,23 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {HttpClientModule} from '@angular/common/http';
 
-import { RpsComponentComponent } from './rps-component.component';
+import { ApiService } from './rps-component.component';
 
-describe('RpsComponentComponent', () => {
-  let component: RpsComponentComponent;
-  let fixture: ComponentFixture<RpsComponentComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ RpsComponentComponent ]
-    })
-    .compileComponents();
 
-    fixture = TestBed.createComponent(RpsComponentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+describe('ApiService', () => {
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientTestingModule], 
+    providers: [ApiService]
+  }));
+
+   it('should be created', () => {
+    const service: ApiService = TestBed.get(ApiService);
+    expect(service).toBeTruthy();
+   });
+
+   it('should have get function', () => {
+    const service: ApiService = TestBed.get(ApiService);
+    expect(service.play).toBeTruthy();
+   });
+
 });
