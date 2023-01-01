@@ -1,27 +1,55 @@
-# Angularclient
+#Rock-Paper-Scissors Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+This is a simple rock-paper-scissors game with an Angular frontend and a Spring Boot backend.
 
-## Development server
+##Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **[Node.js](https://nodejs.org)**
+- **[Angular CLI](https://angular.io/cli)**
+- **[Java Development Kit (JDK)](https://www.oracle.com/de/java/technologies/downloads/)**
+- **[Maven](https://maven.apache.org/download.cgi)**
 
-## Code scaffolding
+##Running the Application
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+    >git clone https://github.com/your-username/rock-paper-scissors.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Go to the frontend directory:
 
-## Running unit tests
+   > cd rock-paper-scissors/frontend
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Install the dependencies:
 
-## Running end-to-end tests
+   > npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Build and run the frontend:
 
-## Further help
+    >ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The frontend will be served at ``http://localhost:4200``.
+
+5. Go to the backend directory:
+
+    > cd ../backend
+
+6. Build and run the backend:
+
+    > mvn spring-boot:run
+
+The backend will be served at ``http://localhost:8080``.
+
+7. Open the frontend in a web browser:
+
+   > http://localhost:4200
+
+##Playing the Game
+
+1. Choose your symbol (rock, paper, or scissors) by clicking on the corresponding button.
+2. The computer's symbol will be displayed.
+3. The winner of the round will be displayed.
+4. Play as many rounds as you like.
+
+##Troubleshooting
+- If you are having issues building or running the frontend, try running **´ng build´** followed by **´ng serve´**.
+- If you are having issues building or running the backend, try running **´mvn clean package´** followed by **´mvn spring-boot:run´**.
