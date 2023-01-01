@@ -13,7 +13,7 @@ This is a simple rock-paper-scissors game with an Angular frontend and a Spring 
 
 1. Clone the repository:
 
-    >git clone https://github.com/your-username/rock-paper-scissors.git
+    >git clone https://github.com/ebouiano/RockPaperScissorsGame.git
 
 2. Go to the frontend directory:
 
