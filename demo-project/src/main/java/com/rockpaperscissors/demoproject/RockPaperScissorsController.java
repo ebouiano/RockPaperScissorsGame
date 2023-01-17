@@ -1,6 +1,5 @@
 package com.rockpaperscissors.demoproject;
 
-import java.util.Random;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
