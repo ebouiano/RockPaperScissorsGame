@@ -32,27 +32,14 @@ public class RockPaperScissorsController {
     
     @PostMapping("/play")
     public Result play(@RequestBody PlayRequest request) {
-        // Generate a random symbol for the computer
-        String[] symbols = {"rock", "paper", "scissors"};
-        int index = new Random().nextInt(symbols.length);
-        String computer = symbols[index];
-
-        // Apply the rules of rock, paper, scissors to determine the winner
-        String winner;
-        if (request.getPlayer().equals(computer)) {
-            winner = "draw";
-        } else if (request.getPlayer().equals("rock") && computer.equals("scissors") ||
-                request.getPlayer().equals("paper") && computer.equals("rock") ||
-                request.getPlayer().equals("scissors") && computer.equals("paper")) {
-            winner = "player";
-        } else {
-            winner = "computer";
-        }
-
+        GameLogic gameLogic = new GameLogic();
+        String computer = gameLogic.generateSymbol();
+        String winner = gameLogic.decideWinner(request, computer);    
         // Return the result
         return new Result(request.getPlayer(), computer, winner);
     }
-   
+
+
 }
 
 
