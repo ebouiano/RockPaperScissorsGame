@@ -48,3 +48,18 @@ public class Result {
         return winner;
     }
 }
+
+enum Results {
+    COMPUTER("computer"), PLAYER("player"), DRAW("draw");
+    private String result;
+
+    private Results(String result) {
+        this.result = result;
+    }
+
+    @Override
+    public String toString(){
+        return result;
+    }
+}
+
