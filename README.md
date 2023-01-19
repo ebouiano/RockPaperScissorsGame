@@ -17,7 +17,7 @@ This is a simple rock-paper-scissors game with an Angular frontend and a Spring 
 
 2. Go to the frontend directory:
 
-   > cd rock-paper-scissors/frontend
+   > cd src/app
 
 3. Install the dependencies:
 
@@ -31,7 +31,7 @@ The frontend will be served at ``http://localhost:4200``.
 
 5. Go to the backend directory:
 
-    > cd ../backend
+    > cd demo-project\src\main\java\com\rockpaperscissors\demoproject
 
 6. Build and run the backend:
 
