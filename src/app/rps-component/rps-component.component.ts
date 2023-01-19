@@ -4,21 +4,9 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-rps-component',
-  template: `
-    <div>
-      <button (click)="play('rock')">Rock</button>
-      <button (click)="play('paper')">Paper</button>
-      <button (click)="play('scissors')">Scissors</button>
-    </div>
-    <div *ngIf="result">
-      You played {{ result.player }}, the computer played {{ result.computer }}.
-      <div *ngIf="result.winner === 'player'">You won!</div>
-      <div *ngIf="result.winner === 'computer'">The computer won.</div>
-      <div *ngIf="result.winner === 'draw'">It's a draw.</div>
-    </div>
-  `,
+  template: ``,
   templateUrl: './rps-component.component.html',
-  styleUrls: ['./rps-component.component.scss']
+  styleUrls: ['./rps-component.component.scss'],
 })
 
 /**
@@ -30,7 +18,7 @@ export class RpsComponentComponent implements OnInit {
   result: Result = {
     player: '',
     computer: '',
-    winner: ''
+    winner: '',
   };
 
   /**
@@ -51,34 +39,24 @@ export class RpsComponentComponent implements OnInit {
    * @return {void}
    */
   play(symbol: string) {
-    this.api.play(symbol).subscribe(result => {
+    this.api.play(symbol).subscribe((result) => {
       if (this.result) {
         this.result = result;
       }
     });
   }
-
-  /**
-   * Makes a GET request to the API. This method is for debug purposes.
-   * @return {void}
-   */
-  see() {
-    this.api.see();
-  }
 }
-
-
 
 /**
  * Class representing an API service.
  * @decorator {Injectable}
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   /** Base URL for the API */
-  url = "http://localhost:8080";
+  url = 'http://localhost:8080';
 
   /**
    * Creates an instance of ApiService.
@@ -104,15 +82,14 @@ export class ApiService {
   }
 }
 
-
 /**
  * Interface representing a rock-paper-scissors game result.
  */
 export interface Result {
   /** The player's symbol (rock, paper, or scissors) */
-  player: string,
+  player: string;
   /** The computer's symbol (rock, paper, or scissors) */
-  computer: string,
+  computer: string;
   /** The winner of the game (player, computer, or draw) */
-  winner: string
+  winner: string;
 }
